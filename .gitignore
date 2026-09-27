@@ -1,0 +1,13 @@
+# Dependencies and generated build output
+node_modules
+dist/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Browser automation artifacts
+.playwright-cli/
+
+# macOS metadata
+.DS_Store

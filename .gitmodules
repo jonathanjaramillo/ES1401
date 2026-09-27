@@ -1,0 +1,3 @@
+[submodule "XRP_MicroPython"]
+	path = XRP_MicroPython
+	url = https://github.com/Open-STEM/XRP_MicroPython.git

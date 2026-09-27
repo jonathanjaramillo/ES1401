@@ -1,0 +1,270 @@
+:root {
+  --slidev-code-padding: 8px 10px;
+  --slidev-code-background: #16161690 !important;
+}
+
+/* Force a true-black backdrop so the glow effect reads cleanly */
+.dark #slide-content {
+  background-color: black !important;
+}
+
+h6 {
+  text-transform: initial !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+}
+
+/* Glassy code blocks */
+.slidev-code {
+  backdrop-filter: blur(10px);
+  border: 1px solid #eee1;
+}
+
+/* Click transitions */
+.slidev-vclick-target {
+  transition:
+    opacity 500ms ease,
+    filter 200ms ease,
+    color 300ms ease;
+}
+
+.slidev-vclick-hidden {
+  opacity: 0;
+  pointer-events: none;
+  filter: blur(3px);
+}
+
+/* Slide-to-slide fade */
+.fade-out-leave-active {
+  transition:
+    opacity calc(var(--slidev-transition-duration) * 0.6) ease-out,
+    filter 200ms ease;
+}
+
+.fade-out-enter-active {
+  transition:
+    opacity calc(var(--slidev-transition-duration) * 0.8) ease-in,
+    filter 200ms ease;
+  transition-delay: calc(var(--slidev-transition-duration) * 0.6);
+}
+
+.fade-out-enter-from,
+.fade-out-leave-to {
+  opacity: 0;
+  filter: blur(5px);
+}
+
+.slidev-code .line {
+  transition: opacity 200ms ease;
+}
+
+/* Course deck defaults: readable on a projector and resilient to mixed media. */
+.slidev-layout {
+  padding: 2.6rem 3.25rem;
+  color: #eef6ff;
+  font-size: 1.08rem;
+}
+
+.slidev-layout h1,
+.slidev-layout h2 {
+  color: #f8fbff;
+  letter-spacing: -0.025em;
+}
+
+.slidev-layout h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.slidev-layout li {
+  margin: 0.32rem 0;
+}
+
+.slidev-layout strong {
+  color: #67e8f9;
+}
+
+.slidev-layout p:has(> img) {
+  display: inline-flex;
+  max-width: 48%;
+  margin: 0.5rem 0.5rem 0.25rem 0;
+  vertical-align: middle;
+}
+
+.slidev-layout img {
+  width: 100%;
+  max-height: 13rem;
+  object-fit: contain;
+  border-radius: 0.65rem;
+}
+
+/* Keep image sets on one row instead of stacking off the canvas. */
+.slidev-layout p:has(> img):has(~ p:has(> img) ~ p:has(> img)),
+.slidev-layout p:has(> img):has(~ p:has(> img) ~ p:has(> img)) ~ p:has(> img) {
+  max-width: 31%;
+}
+
+.slidev-layout p:has(> img):has(~ p:has(> img) ~ p:has(> img) ~ p:has(> img)),
+.slidev-layout p:has(> img):has(~ p:has(> img) ~ p:has(> img) ~ p:has(> img)) ~ p:has(> img) {
+  max-width: 23%;
+}
+
+.slidev-layout svg.diagram {
+  width: 100%;
+  max-height: 22rem;
+}
+
+.slidev-layout svg.diagram:not(.concept-diagram) text {
+  font-size: 20px !important;
+}
+
+.slidev-layout .katex-display {
+  margin: 0.8rem 0;
+  overflow: visible;
+}
+
+.slidev-layout .equation-card {
+  margin: 1rem auto;
+  padding: 1rem 1.4rem;
+  border: 2px solid rgb(17 94 89);
+  border-radius: 0.75rem;
+  background: rgb(17 94 89 / 0.2);
+}
+
+.slidev-layout .concept-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.slidev-layout .concept-card {
+  padding: 1rem;
+  border: 2px solid rgb(255 255 255 / 0.08);
+  border-radius: 0.75rem;
+  background: rgb(255 255 255 / 0.06);
+}
+
+.slidev-layout .accent {
+  color: #2dd4bf;
+}
+
+.slidev-layout .muted {
+  color: rgb(226 232 240 / 0.72);
+}
+
+/* Reusable course-deck composition helpers. */
+.slidev-layout .deck-kicker {
+  color: #67e8f9;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.slidev-layout .card-grid-2,
+.slidev-layout .card-grid-3 {
+  display: grid;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.slidev-layout .card-grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.slidev-layout .card-grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.slidev-layout .course-card {
+  padding: 1rem;
+  border: 2px solid rgb(255 255 255 / 0.08);
+  border-radius: 0.75rem;
+  background: rgb(255 255 255 / 0.06);
+}
+
+/* Keep comparison markers aligned inside their cards. */
+.slidev-layout .comparison-list {
+  margin: 0.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slidev-layout .comparison-list li {
+  position: relative;
+  margin: 0.42rem 0;
+  padding-left: 1.15rem;
+}
+
+.slidev-layout .comparison-list li::before {
+  position: absolute;
+  top: 0.05em;
+  left: 0;
+  color: #67e8f9;
+  content: "•";
+  font-weight: 800;
+}
+
+.slidev-layout .course-card.teal {
+  border-color: rgb(17 94 89);
+  background: rgb(17 94 89 / 0.2);
+}
+
+.slidev-layout .course-card.blue {
+  border-color: rgb(30 64 175);
+  background: rgb(30 64 175 / 0.2);
+}
+
+.slidev-layout .course-card.orange {
+  border-color: rgb(154 52 18);
+  background: rgb(154 52 18 / 0.2);
+}
+
+.slidev-layout .course-card.amber {
+  border-color: rgb(146 64 14);
+  background: rgb(146 64 14 / 0.2);
+}
+
+.slidev-layout .course-card.violet {
+  border-color: rgb(91 33 182);
+  background: rgb(91 33 182 / 0.2);
+}
+
+.slidev-layout .course-card.red {
+  border-color: rgb(153 27 27);
+  background: rgb(153 27 27 / 0.2);
+}
+
+.slidev-layout .card-label {
+  margin-bottom: 0.45rem;
+  color: #67e8f9;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.slidev-layout .takeaway {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border: 2px solid rgb(255 255 255 / 0.08);
+  border-radius: 0.75rem;
+  background: rgb(255 255 255 / 0.06);
+  text-align: center;
+}
+
+.slidev-layout .diagram-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 18rem;
+  padding: 0.55rem;
+  border: 2px solid rgb(255 255 255 / 0.08);
+  border-radius: 0.9rem;
+  background: rgb(2 6 23 / 0.58);
+}
+
+.slidev-layout .diagram-frame .diagram {
+  max-height: 19rem;
+}
