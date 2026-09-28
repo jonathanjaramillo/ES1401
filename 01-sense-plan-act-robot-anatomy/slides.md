@@ -7,13 +7,13 @@ info: Week 1, Session 1 — Introduction to Robotics (XRP)
 # Welcome to Robotics!
 ## Meet Your Robot: the XRP
 
-- This month, you build and program a real robot
+- Over these two weeks, you build and program a real robot
 - Today: the big idea behind ALL robots, then meet your XRP
 - By the end of class: XRP assembled, first program running
 
 **Graphic:** Full-bleed photo of an assembled XRP robot sitting on a table, clean and well-lit, no clutter. Just a strong hero image to open the class.
 
-**Speaker notes:** (0:00–1:00) Welcome everyone, quick intro to the course — one month, hands-on, you'll be programming this little rover sitting in front of you by the end of today's lab. No prior robotics experience assumed. Today's lecture is short on purpose: 15 minutes of "why" and "what," then straight into hands-on building. Let's get into it.
+**Speaker notes:** (0:00–1:00) Welcome everyone, quick intro to the course — two weeks, hands-on, you'll be programming this little rover sitting in front of you by the end of today's lab. No prior robotics experience assumed. Today's lecture is short on purpose: 15 minutes of "why" and "what," then straight into hands-on building. Let's get into it.
 
 ---
 
@@ -40,7 +40,7 @@ info: Week 1, Session 1 — Introduction to Robotics (XRP)
 
 **Graphic:** Simple 4x2 grid of icon cards, one per item above, each with a small icon and a "robot or not?" question mark badge — no answers shown yet, this is a live poll slide.
 
-**Speaker notes:** (2:00–4:30) Go through the list one at a time and take a quick show of hands on each — "robot" or "not a robot" — without telling them who's right yet. A few deliberately tricky ones: the dishwasher and the wind-up toy car just run a fixed mechanism/timer with zero sensing, which feels robot-ish but isn't — this foreshadows "open-loop control," which we'll hit in Session 3. The RC car has a person doing all the sensing and deciding; the car itself is just obeying, so most students will (correctly) say it's not a robot on its own. The thermostat, vending machine, smart speaker, Roomba, and Mars rover all actually do sense-and-react on their own, even though most people's gut reaction is that a thermostat "isn't a robot" — that tension is exactly what we resolve on the next slide.
+**Speaker notes:** (2:00–4:30) Go through the list one at a time and take a quick show of hands on each — "robot" or "not a robot" — without telling them who's right yet. A few deliberately tricky ones: the dishwasher and the wind-up toy car just run a fixed mechanism/timer with zero sensing, which feels robot-ish but isn't — this foreshadows open-loop control, which we will revisit in Session 6. The RC car has a person doing all the sensing and deciding; the car itself is just obeying, so most students will (correctly) say it's not a robot on its own. The thermostat, vending machine, smart speaker, Roomba, and Mars rover all actually do sense-and-react on their own, even though most people's gut reaction is that a thermostat "isn't a robot" — that tension is exactly what we resolve on the next slide.
 
 ---
 
@@ -78,7 +78,7 @@ Then the loop repeats immediately with a fresh sensor reading.
 
 **Graphic:** Simple top-down SVG scene: a small robot icon approaching a wall, with a dashed distance line and "10 cm" label between the robot and wall, a thought-bubble icon above the robot showing a decision (checkmark/arrow turning), and a curved arrow showing the robot's new turned path away from the wall. Could be a 3-frame mini storyboard (before / decide / after) rather than animated.
 
-**Speaker notes:** (7:30–9:30) Let's make that concrete with an example you'll actually build later this month. Say the robot is driving forward and there's a wall ahead. Sense: the ultrasonic sensor pings the wall and measures the distance — say, 10 centimeters. Plan: the code checks that number and decides that's too close, time to turn. Act: the motors turn the robot away from the wall. And then — critically — it doesn't stop there. It immediately senses again, gets a new distance reading, and the whole loop repeats. That constant repeating is what makes it "smart" instead of just running a single scripted move.
+**Speaker notes:** (7:30–9:30) Let's make that concrete with an example you'll actually build later in the course. Say the robot is driving forward and there's a wall ahead. Sense: the ultrasonic sensor pings the wall and measures the distance — say, 10 centimeters. Plan: the code checks that number and decides that's too close, time to turn. Act: the motors turn the robot away from the wall. And then — critically — it doesn't stop there. It immediately senses again, gets a new distance reading, and the whole loop repeats. That constant repeating is what makes it "smart" instead of just running a single scripted move.
 
 ---
 
@@ -91,7 +91,7 @@ Then the loop repeats immediately with a fresh sensor reading.
 
 **Graphic:** Clean labeled photo/diagram of the XRP chassis from a 3/4 angle, with 5-6 numbered callout leader lines pointing to: the two drive wheels/motors, the ultrasonic sensor (front), the line/reflectance sensor (bottom), the servo, the main board, and the battery. Numbers correspond to a small legend list beside the image.
 
-**Speaker notes:** (9:30–11:00) This is the XRP — your robot for the rest of the month. It's a differential-drive rover, which just means it has two wheels, each with its own motor, and it steers by spinning them at different speeds, kind of like a tank. It has a handful of sensors, a small onboard computer, and we'll program it all in MicroPython — Python, but designed to run on tiny low-power chips like this one. Over the next few weeks you'll use every part you see labeled here. Today, let's connect what we just learned about sense-plan-act to these actual physical parts.
+**Speaker notes:** (9:30–11:00) This is the XRP — your robot for the rest of the course. It's a differential-drive rover, which just means it has two wheels, each with its own motor, and it steers by spinning them at different speeds, kind of like a tank. It has a handful of sensors, a small onboard computer, and we'll program it all in MicroPython — Python, but designed to run on tiny low-power chips like this one. Over the next two weeks you'll use every part you see labeled here. Today, let's connect what we just learned about sense-plan-act to these actual physical parts.
 
 ---
 

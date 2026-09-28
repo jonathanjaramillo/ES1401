@@ -26,7 +26,7 @@ class: text-center
 
 ## Meet your XRP
 
-<div class="mt-7 text-xl opacity-85">This month, your code becomes a real robot’s behavior.</div>
+<div class="mt-7 text-xl opacity-85">In two weeks, your code becomes a real robot’s behavior.</div>
 
 <div v-click class="takeaway max-w-3xl mx-auto mt-10">
 Today’s finish line: <strong>assembled robot + first program running</strong>
@@ -73,7 +73,7 @@ glowSeed: 111
 </div>
 
 <!--
-Reveal these one at a time and take a quick show-of-hands vote on each before moving on — don't confirm right or wrong yet. Good friction points: the dishwasher and wind-up car just run a fixed timer/mechanism with no sensing, which feels robot-ish but isn't (this foreshadows open-loop control in Session 3). The RC car has all the sensing and deciding happening in the human's head, not the car. The thermostat is deliberately simple hardware that most people don't call a "robot" despite technically sensing and reacting — a good pressure test for whatever definition the class proposed. Save the actual verdicts for the next slide.
+Reveal these one at a time and take a quick show-of-hands vote on each before moving on — don't confirm right or wrong yet. Good friction points: the dishwasher and wind-up car just run a fixed timer/mechanism with no sensing, which feels robot-ish but isn't (this foreshadows open-loop control in Session 6). The RC car has all the sensing and deciding happening in the human's head, not the car. The thermostat is deliberately simple hardware that most people don't call a "robot" despite technically sensing and reacting — a good pressure test for whatever definition the class proposed. Save the actual verdicts for the next slide.
 -->
 
 ---
