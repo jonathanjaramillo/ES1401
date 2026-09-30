@@ -20,20 +20,14 @@ layout: center
 class: text-center
 ---
 
-<div class="deck-kicker">Week 1 · Session 1</div>
-
 # Welcome to Robotics
 
 ## Meet your XRP
 
-<div class="mt-7 text-xl opacity-85">In two weeks, your code becomes a real robot’s behavior.</div>
-
-<div v-click class="takeaway max-w-3xl mx-auto mt-10">
-Today’s finish line: <strong>assembled robot + first program running</strong>
-</div>
+<div class="mt-7 text-xl opacity-85">In two weeks, you’ll program a robot that senses and responds.</div>
 
 <!--
-Welcome students and set the pace: this is a short conceptual launch followed by hands-on assembly. Emphasize that no prior robotics experience is assumed. By the end of class, each team should have an XRP assembled and executing a tiny program.
+Welcome students and set the scope: over six class meetings, they will learn how a robot senses, decides, and acts, then program the XRP to move and respond to its environment. No prior robotics experience is assumed.
 -->
 
 ---
@@ -188,7 +182,7 @@ glowSeed: 152
 <div v-click class="takeaway">Small rover. Same building blocks as much larger robots.</div>
 
 <!--
-Give students a quick physical tour while they look at the robot in front of them. Differential drive means the wheel speeds are controlled independently. The controller is a compact computer, and MicroPython is Python designed for embedded hardware.
+Give students a quick physical tour of the robot. Differential drive means the wheel speeds are controlled independently. The controller is a compact computer, and MicroPython is Python designed for embedded hardware. The following classes connect these parts to short coding activities.
 -->
 
 ---
@@ -213,69 +207,84 @@ Connect the first three subsystems directly to sense–plan–act. Then add the 
 -->
 
 ---
+layout: center
+class: text-center
 glowSeed: 188
 ---
 
-# Spot the subsystems on the XRP
+<div class="deck-kicker">Introduction to Robotics</div>
 
-<div class="grid grid-cols-[1fr_1.25fr] gap-5 mt-5">
-  <div class="space-y-3">
-    <div v-click class="course-card teal"><strong>Perception</strong><br><span class="text-sm">ultrasonic · IMU · reflectance · encoders</span></div>
-    <div v-click class="course-card blue"><strong>Computation</strong><br><span class="text-sm">RP2040 / RP2350 controller</span></div>
-    <div v-click class="course-card orange"><strong>Actuation</strong><br><span class="text-sm">two drive motors · servo</span></div>
-  </div>
-  <div class="space-y-3">
-    <div v-click class="course-card violet"><strong>Communication</strong><br><span class="text-sm">built-in wireless connection to the editor</span></div>
-    <div v-click class="course-card red"><strong>Power</strong><br><span class="text-sm">onboard battery pack</span></div>
-  </div>
+# Course Overview
+
+<div class="mt-5 text-xl opacity-85">What we’ll study, build, and discuss together.</div>
+
+---
+glowSeed: 194
+---
+
+# Content
+
+<div class="grid grid-cols-2 gap-4 mt-7 text-xl">
+  <div class="course-card teal">Robot anatomy and the sense–plan–act loop</div>
+  <div class="course-card blue">Differential drive</div>
+  <div class="course-card orange">Wheel encoders and motion measurement</div>
+  <div class="course-card violet">Ultrasonic sensing and the IMU</div>
+  <div class="course-card amber">Sensor noise and smoothing</div>
+  <div class="course-card red">Open- and closed-loop control</div>
 </div>
 
 <!--
-Use the physical XRP as the real diagram. Call out the front distance sensor, the IMU on the board, the downward-facing reflectance sensor, and the motor encoders. Then locate the controller, motors, wireless connection, and battery pack.
+Give students a compact map of the technical topics covered in the course. Keep this organized by subject rather than by week or session.
 -->
 
 ---
-glowSeed: 207
+glowSeed: 197
 ---
 
-# Today’s lab: bring it to life
+# Coding Activities
 
-<div class="card-grid-3 mt-8">
-  <div v-click class="course-card teal text-center">
-    <div class="text-4xl mb-2">📦</div><div class="card-label">Unbox</div>
-    Inventory parts and learn their names.
-  </div>
-  <div v-click class="course-card blue text-center">
-    <div class="text-4xl mb-2">🔧</div><div class="card-label">Assemble</div>
-    Build the chassis—no soldering required.
-  </div>
-  <div v-click class="course-card orange text-center">
-    <div class="text-4xl mb-2">💻</div><div class="card-label">Code</div>
-    Blink the LED and print one live sensor value.
-  </div>
+<div class="max-w-4xl mx-auto mt-8 text-2xl leading-relaxed text-center">
+  Most class meetings will be spent <strong class="text-teal-300">writing code</strong> and implementing algorithms directly on the robot.
 </div>
 
-<div v-click class="takeaway mt-8"><strong>Ask early.</strong> Setup problems are part of the lab, not a test of prior knowledge.</div>
+<div class="takeaway mt-8 text-center">Learn an idea → program it → see what the XRP does.</div>
 
 <!--
-Walk through the three lab phases. The first program should blink the onboard LED, then print one sensor reading to the console. Frame this as a tiny robotics loop: the computer reads or decides, then changes the LED.
+Set expectations for the hands-on structure of the course: after introducing an idea, most class time goes to programming and trying algorithms on the XRP.
 -->
 
 ---
-layout: center
-class: text-center
-glowSeed: 223
+glowSeed: 200
 ---
 
-# One loop. Five subsystems. Your robot.
+# Quizzes
 
-<div class="grid grid-cols-2 gap-8 max-w-4xl mx-auto mt-6 text-left">
-  <div v-click class="course-card teal"><div class="card-label">Remember</div><strong>Sense → Plan → Act</strong> repeats continuously.</div>
-  <div v-click class="course-card blue"><div class="card-label">Find</div>Perception · computation · actuation · communication · power.</div>
+<div class="max-w-4xl mx-auto mt-7 grid grid-cols-2 gap-4 text-lg">
+  <div class="course-card teal"><div class="card-label">Frequency</div>One 3-question quiz each week</div>
+  <div class="course-card blue"><div class="card-label">When</div>Usually Friday, unless announced otherwise</div>
+  <div class="course-card orange"><div class="card-label">Format</div>In person, handwritten, short answer</div>
+  <div class="course-card violet"><div class="card-label">What’s covered</div>Material from lecture</div>
 </div>
 
-<div v-click class="mt-10 text-2xl">Now let’s build an XRP.</div>
+<!--
+Explain the quiz routine clearly: one short, handwritten, in-person quiz with three questions each week, usually on Friday unless another date is announced. Questions are based on lecture material.
+-->
+
+---
+glowSeed: 203
+---
+
+# Discussion Activities
+
+<div class="mt-3 text-lg opacity-85">Each class includes a discussion of recent events and interesting topics in robotics and AI.</div>
+
+<div class="grid grid-cols-2 gap-3 mt-5 text-base">
+  <div class="course-card teal"><div class="card-label">1</div>AI Agents, Responsibility, and Society</div>
+  <div class="course-card blue"><div class="card-label">2</div>Robots and Privacy</div>
+  <div class="course-card orange"><div class="card-label">3</div>Autonomous Cars, Safety, and Responsibility</div>
+  <div class="course-card violet"><div class="card-label">4</div>Specialized Robots and General-Purpose Humanoids</div>
+</div>
 
 <!--
-Close with a fast verbal recap. Ask for the three steps, then ask for any two of the five subsystems. Transition immediately to station setup and assembly.
+Tell students that class discussions connect robotics and AI to current events and broader questions. The four discussion topics are AI agents and society, privacy in robotics, autonomous-car safety and responsibility, and specialized versus general-purpose humanoid robots.
 -->

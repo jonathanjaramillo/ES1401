@@ -20,8 +20,6 @@ layout: center
 class: text-center
 ---
 
-<div class="deck-kicker">Week 1 · Session 2</div>
-
 # Differential Drive
 
 ## How the XRP actually moves

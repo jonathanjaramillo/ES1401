@@ -20,8 +20,6 @@ layout: center
 class: text-center
 ---
 
-<div class="deck-kicker">Week 2 · Session 6</div>
-
 # Open vs. Closed Loop Control
 
 ## Why checking your work matters

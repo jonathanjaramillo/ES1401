@@ -20,8 +20,6 @@ layout: center
 class: text-center
 ---
 
-<div class="deck-kicker">Week 1 · Session 3</div>
-
 # Encoders
 
 ## Counting wheel turns to measure distance

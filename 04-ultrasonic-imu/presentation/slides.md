@@ -20,8 +20,6 @@ layout: center
 class: text-center
 ---
 
-<div class="deck-kicker">Week 2 · Session 4</div>
-
 # Ultrasonic & IMU
 
 ## “How far?” and “Which way?”

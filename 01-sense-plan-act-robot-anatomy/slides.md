@@ -8,12 +8,12 @@ info: Week 1, Session 1 — Introduction to Robotics (XRP)
 ## Meet Your Robot: the XRP
 
 - Over these two weeks, you build and program a real robot
-- Today: the big idea behind ALL robots, then meet your XRP
-- By the end of class: XRP assembled, first program running
+- Across six classes, explore how robots sense, decide, and act
+- Over two weeks, program the XRP to move and respond to its environment
 
 **Graphic:** Full-bleed photo of an assembled XRP robot sitting on a table, clean and well-lit, no clutter. Just a strong hero image to open the class.
 
-**Speaker notes:** (0:00–1:00) Welcome everyone, quick intro to the course — two weeks, hands-on, you'll be programming this little rover sitting in front of you by the end of today's lab. No prior robotics experience assumed. Today's lecture is short on purpose: 15 minutes of "why" and "what," then straight into hands-on building. Let's get into it.
+**Speaker notes:** Welcome students and set the scope: over six class meetings, they will learn how a robot senses, decides, and acts, then program the XRP to move and respond to its environment. No prior robotics experience is assumed.
 
 ---
 
@@ -82,7 +82,7 @@ Then the loop repeats immediately with a fresh sensor reading.
 
 ---
 
-# Meet the XRP: Your Robot for the Month
+# Meet the XRP: Your Robot for the Course
 
 - Small differential-drive rover — two independently controlled wheels
 - Built around a tiny computer chip (like the one inside many gadgets)
@@ -91,7 +91,7 @@ Then the loop repeats immediately with a fresh sensor reading.
 
 **Graphic:** Clean labeled photo/diagram of the XRP chassis from a 3/4 angle, with 5-6 numbered callout leader lines pointing to: the two drive wheels/motors, the ultrasonic sensor (front), the line/reflectance sensor (bottom), the servo, the main board, and the battery. Numbers correspond to a small legend list beside the image.
 
-**Speaker notes:** (9:30–11:00) This is the XRP — your robot for the rest of the course. It's a differential-drive rover, which just means it has two wheels, each with its own motor, and it steers by spinning them at different speeds, kind of like a tank. It has a handful of sensors, a small onboard computer, and we'll program it all in MicroPython — Python, but designed to run on tiny low-power chips like this one. Over the next two weeks you'll use every part you see labeled here. Today, let's connect what we just learned about sense-plan-act to these actual physical parts.
+**Speaker notes:** This is the XRP — your robot for the course. It is a differential-drive rover: two wheels, each with its own motor, steer by spinning at different speeds. The robot has sensors, a small onboard computer, and runs MicroPython. Over the next two weeks, connect the sense-plan-act idea to these physical parts and use code to control them.
 
 ---
 
@@ -109,43 +109,53 @@ Then the loop repeats immediately with a fresh sensor reading.
 
 ---
 
-# Spot the Subsystems on the XRP
+# Course Overview
 
-| Subsystem | On the XRP |
-|---|---|
-| Perception | Ultrasonic sensor, IMU/gyro, line sensor |
-| Computation | RP2040/RP2350 controller board |
-| Actuation | Two drive motors + one servo |
-| Communication | Built-in WiFi |
-| Power | Onboard battery pack |
+A new title slide introduces the structure of the course.
 
-**Graphic:** Same labeled XRP photo/diagram from the earlier slide, but now each numbered callout is recolored/grouped to match one of the five subsystem colors from the previous slide, with a small color-coded legend (Perception=blue, Computation=green, Actuation=orange, Communication=purple, Power=red) so students can visually map parts to categories at a glance.
-
-**Speaker notes:** (13:00–15:00) Here's the full picture. Perception: the ultrasonic sensor out front measures distance, the IMU — that's the gyro — senses tilting and turning, and the line sensor on the bottom detects light and dark surfaces, like a line on the floor. Computation: all of that data goes to the RP2040 or RP2350 chip on the main board — that's the brain, running your MicroPython code. Actuation: the two drive motors move the robot, plus one servo you can attach things to, like a little arm or a sensor mount. Communication: it has WiFi built in, which is how the web editor on your laptop talks to the robot. And power: a battery pack keeps all of it running without a cord. Every single piece maps onto one of our five categories.
+**Speaker notes:** This course combines technical content, hands-on robot programming, short quizzes, and class discussions.
 
 ---
 
-# Today's Lab: Bring It to Life
+# Content
 
-- Unbox and assemble your XRP kit
-- Set up the MicroPython web editor and connect to your robot
-- Write your first program:
-  - Blink the onboard LED
-  - Print one live sensor reading to the console
+- Robot anatomy and the sense-plan-act loop
+- Differential drive
+- Wheel encoders and motion measurement
+- Ultrasonic sensing and the IMU
+- Sensor noise and smoothing
+- Open- and closed-loop control
 
-**Graphic:** Simple 3-icon horizontal flow: a cardboard box icon → a wrench/screwdriver icon → a blinking LED + terminal window icon, with arrows between them, representing "unbox → assemble → code." Keeps it light and encouraging rather than technical.
-
-**Speaker notes:** (15:00–17:00) Now it's your turn. In the lab today you'll unbox your XRP kit and put it together — don't worry, no soldering, it's mostly snap-together plus a few screws, and we'll walk you through it. Then you'll set up the MicroPython web editor in your browser and get your laptop talking to the robot over WiFi — that's the communication subsystem in action already. Finally, you'll write your very first program: just a few lines that blink the onboard LED and print one live reading from a sensor, like the distance sensor, to the console. That's a real sense-plan-act moment — even blinking a light is your code making a decision and acting on it.
+**Speaker notes:** Present the technical topics as a subject overview without dividing them by week or session.
 
 ---
 
-# Quick Recap Before We Start
+# Coding Activities
 
-- Every robot runs a **Sense → Plan → Act** loop, repeating constantly
-- Robots are built from 5 subsystems: **perception, computation, actuation, communication, power**
-- The XRP has all five — you can point to each one
-- Today's goal: assemble your XRP and get code running on it
+Most class meetings will be spent writing code and implementing algorithms on the robot.
 
-**Graphic:** Small combined recap graphic: the sense-plan-act triangle from slide 2 (small, static, no animation needed here) sitting next to a mini version of the labeled XRP image, connected by an equals-style arrow, visually saying "this loop = this robot."
+**Speaker notes:** Explain that students will regularly turn lecture ideas into code and run them on the XRP.
 
-**Speaker notes:** (17:00–18:30) Quick recap before you head to your stations: every robot, no exceptions, runs sense-plan-act on repeat. Every robot is built from the same five subsystems, and you now know exactly where to find each one on your XRP. Your job for the rest of today is hands-on — get the robot assembled, get the editor talking to it, and get your first tiny program running. If anything's unclear as you go, flag down an instructor — that's what we're here for. Let's build some robots.
+---
+
+# Quizzes
+
+- One 3-question quiz each week
+- Usually Friday unless otherwise specified
+- In person, handwritten, short answer
+- Based on lecture material
+
+**Speaker notes:** Set expectations for the regular weekly quiz format and timing.
+
+---
+
+# Discussion Activities
+
+Each class includes a discussion of recent events and interesting topics in robotics and AI.
+
+1. AI Agents, Responsibility, and Society
+2. Robots and Privacy
+3. Autonomous Cars, Safety, and Responsibility
+4. Specialized Robots and General-Purpose Humanoids
+
+**Speaker notes:** Introduce the four discussion topics students will encounter during the course.

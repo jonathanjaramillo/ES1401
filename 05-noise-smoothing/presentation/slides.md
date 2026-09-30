@@ -20,8 +20,6 @@ layout: center
 class: text-center
 ---
 
-<div class="deck-kicker">Week 2 · Session 5</div>
-
 # Noise & Smoothing
 
 <div v-click class="takeaway max-w-3xl mx-auto mt-10">A filter turns a stream of measurements into a signal we can use.</div>
